@@ -120,7 +120,7 @@ module.exports = {
       current: "currentColor",
     },
     boxShadow: {
-      global: "0 0 8px 0 rgba(11,13,22,0.08)",
+      sm: "0 0 8px 0 rgba(11,13,22,0.08)",
       md: "0 1px 10px 0 rgba(11,13,22,0.12)",
       lg: "0 8px 16px 0 rgba(11,13,22,0.14)",
     },
