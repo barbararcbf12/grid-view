@@ -13,7 +13,11 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      data-testid="modal-backdrop"
+      onMouseDown={onClose}
+    >
       <div
         ref={modalRef}
         className="bg-white p-6 rounded-lg max-w-md w-full relative"

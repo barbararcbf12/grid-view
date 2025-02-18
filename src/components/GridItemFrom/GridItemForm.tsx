@@ -33,7 +33,7 @@ export function GridItemForm({ onSubmit, onClose }: GridItemFormProps) {
         <input
           type="text"
           id="title"
-          required
+          required={true}
           className="w-full px-4 py-2 border rounded-lg"
           value={formData.title}
           onChange={(e) =>
@@ -48,7 +48,7 @@ export function GridItemForm({ onSubmit, onClose }: GridItemFormProps) {
         </label>
         <textarea
           id="description"
-          required
+          required={true}
           className="w-full px-4 py-2 border rounded-lg"
           value={formData.description}
           onChange={(e) =>
@@ -64,7 +64,7 @@ export function GridItemForm({ onSubmit, onClose }: GridItemFormProps) {
         <input
           type="url"
           id="imagePath"
-          required
+          required={true}
           className="w-full px-4 py-2 border rounded-lg"
           value={formData.imagePath}
           onChange={(e) =>
