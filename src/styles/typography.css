@@ -1,0 +1,23 @@
+@import "tailwindcss/components";
+
+@layer components {
+  .h1 {
+    @apply font-sans text-40 font-bold leading-150 sm:text-48;
+  }
+
+  .h2 {
+    @apply font-sans text-28 font-bold leading-140 sm:text-32;
+  }
+
+  .h3 {
+    @apply font-sans text-24 font-normal leading-130 sm:text-28;
+  }
+
+  .h4 {
+    @apply font-sans text-22 font-normal;
+  }
+
+  .h5 {
+    @apply font-sans text-20 font-normal leading-120;
+  }
+}
