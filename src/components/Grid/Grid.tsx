@@ -38,7 +38,10 @@ export function Grid({
           type="search"
           placeholder="Search..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            setCurrentPage(1);
+            setSearchTerm(e.target.value);
+          }}
           className="px-4 py-2 border rounded-lg"
           aria-label="Search grid items"
         />

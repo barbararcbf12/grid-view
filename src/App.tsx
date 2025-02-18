@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="space-y-3 h-screen">
       <main className="p-3 flex justify-center flex-col gap-4">
-        <div className="flex justify-end mb-4">
+        <div className="flex justify-end">
           <Button onClick={() => setIsModalOpen(true)}>Add New Item</Button>
         </div>
         <div className="rounded-mobile md:rounded-desktop bg-grey-100 p-6 shadow-lg w-full flex justify-center">
