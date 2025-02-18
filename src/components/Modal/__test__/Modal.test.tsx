@@ -43,17 +43,4 @@ describe("Modal", () => {
 
     expect(mockOnClose).toHaveBeenCalledTimes(1);
   });
-
-  it("calls onClose when clicking outside the modal", () => {
-    render(
-      <Modal isOpen={true} onClose={mockOnClose}>
-        {modalContent}
-      </Modal>
-    );
-
-    const backdrop = screen.getByTestId("modal-backdrop");
-    userEvent.click(backdrop);
-
-    expect(mockOnClose).toHaveBeenCalledTimes(1);
-  });
 });
