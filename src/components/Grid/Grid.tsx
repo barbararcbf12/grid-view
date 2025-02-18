@@ -1,18 +1,23 @@
 import { useState } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
 
-import gridData from "../../data/grid-data.json";
 import { GridItem } from "../../types/types";
 import { ITEMS_PER_PAGE } from "../../constants/grid";
 import Card from "../Card/Card";
 import Button from "../Button/Button";
 
-export function Grid() {
+export function Grid({
+  gridItems,
+  setGridItems,
+}: {
+  gridItems: GridItem[];
+  setGridItems: React.Dispatch<React.SetStateAction<GridItem[]>>;
+}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const debouncedSearch = useDebounce(searchTerm, 300);
 
-  const filteredData: GridItem[] = gridData?.filter(
+  const filteredData: GridItem[] = gridItems?.filter(
     (item) =>
       item.title.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
       item.description.toLowerCase().includes(debouncedSearch.toLowerCase())
@@ -53,6 +58,7 @@ export function Grid() {
             ))}
           </div>
 
+          {/* PAGINATION */}
           <div
             className="flex justify-center gap-2"
             role="navigation"
