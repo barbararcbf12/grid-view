@@ -8,7 +8,7 @@ function Card({ item }: CardProps) {
   return (
     <div
       key={item.title}
-      className="border border-grey-200 hover:border-grey-300 bg-grey-100 shadow-sm hover:shadow-lg transition-shadow max-w-96 min-w-[382px] overflow-hidden"
+      className="border border-grey-200 hover:border-grey-300 bg-grey-100 shadow-sm hover:shadow-lg transition-shadow max-w-96 md:min-w-[340px] lg:max-w-[310px] overflow-hidden"
       role="gridcell"
       tabIndex={0}
     >

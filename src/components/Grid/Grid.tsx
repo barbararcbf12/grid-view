@@ -26,8 +26,8 @@ export function Grid() {
   );
 
   return (
-    <div className="space-y-6 min-h-[846px]">
-      <div className="flex flex-col space-y-2 pb-2 md:pb-0 md:flex-row justify-between items-center">
+    <div className="space-y-6 min-h-[846px] lg:min-w-[1054px]">
+      <div className="flex flex-col space-y-2 pb-2 md:pb-0 md:flex-row justify-between md:items-center">
         <h1 className="h1">Grid View</h1>
         <input
           type="search"
