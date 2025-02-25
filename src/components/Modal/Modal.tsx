@@ -17,7 +17,12 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       data-testid="modal-backdrop"
       role="dialog"
-      onMouseDown={onClose}
+      onMouseDown={(e) => {
+        // Only close if clicking the backdrop itself, not its children
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
     >
       <div
         ref={modalRef}
